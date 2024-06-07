@@ -1,0 +1,43 @@
+[project]
+name = "hardcore-lyricist"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Andy Weaver", email = "andrewayersweaver+github@gmail.com" }
+]
+dependencies = [
+    "pydantic>=2.7.3",
+    "sqlmodel>=0.0.19",
+    "torch==2.2.2",
+    "transformers==4.40.0",
+    "datasets==2.18.0",
+    "accelerate==0.29.3",
+    "evaluate==0.4.1",
+    "bitsandbytes==0.43.1",
+    "huggingface-hub==0.22.2",
+    "trl==0.8.6",
+    "peft==0.10.0",
+    "python-dotenv>=1.0.1",
+    "pyyaml>=6.0.1",
+    "ipython>=8.25.0",
+    "spacy>=3.7.5",
+    "pip>=24.0",
+    "pandas>=2.2.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hardcore_lyricist"]
